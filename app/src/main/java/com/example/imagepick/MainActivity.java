@@ -184,6 +184,14 @@ public class MainActivity extends AppCompatActivity {
             String path = MediaStore.Images.Media.insertImage(this.getContentResolver(), bbb, "Title", null);
             Uri urri=Uri.parse(path);
             image.setImageURI(urri);
+          /*  File fdelete = new File(urri.getPath());
+                  getApplicationContext().deleteFile(fdelete.getName());*/
+               /* if (fdelete.delete()) {
+                    Toast.makeText(getApplicationContext(),"file Deleted :" + urri.getPath(),Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(),"file not Deleted :" + urri.getPath(),Toast.LENGTH_SHORT).show();
+                }*/
+
             Toast.makeText(getApplicationContext(), "" + bbb.getHeight() + "   " + bbb.getWidth(), Toast.LENGTH_SHORT).show();
 
             // getDropboxIMGSize(urri);
